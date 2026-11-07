@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 5%;
+    background: #111b2e;
+    border-bottom: 1px solid #263449;
+}
+
+.header h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+    color: #60a5fa;
+}
+
+.header p {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.badge {
+    background: #163b32;
+    color: #6ee7b7;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 30px auto;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.card {
+    background: #111b2e;
+    border: 1px solid #263449;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.metrics .card {
+    margin-bottom: 0;
+}
+
+.card h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #9ca3af;
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+
+.metric {
+    font-size: 29px;
+    font-weight: bold;
+    color: #60a5fa;
+    overflow-wrap: anywhere;
+}
+
+#status {
+    font-size: 21px;
+}
+
+#analysis {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    margin: 4px 8px 4px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button.secondary {
+    background: #374151;
+}
+
+button.secondary:hover {
+    background: #4b5563;
+}
+
+#eventLog {
+    padding-left: 20px;
+    color: #cbd5e1;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+#signalChart {
+    width: 100%;
+    max-height: 300px;
+}
+
+@media (max-width: 900px) {
+    .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 17px;
+    }
+}

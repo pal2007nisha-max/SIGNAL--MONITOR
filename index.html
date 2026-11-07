@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Signal Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>AI Signal Monitor</h1>
+            <p>Signal Interference Detection & Communication Resilience</p>
+        </div>
+        <span class="badge">SIMULATION MODE</span>
+    </header>
+
+    <main class="container">
+        <section class="metrics">
+            <article class="card">
+                <h3>Signal Quality</h3>
+                <p class="metric" id="quality">--%</p>
+            </article>
+
+            <article class="card">
+                <h3>Packet Loss</h3>
+                <p class="metric" id="packetLoss">--%</p>
+            </article>
+
+            <article class="card">
+                <h3>Detection Status</h3>
+                <p class="metric" id="status">Waiting</p>
+            </article>
+
+            <article class="card">
+                <h3>Model Confidence</h3>
+                <p class="metric" id="confidence">--%</p>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Signal Quality Timeline</h2>
+            <canvas id="signalChart"></canvas>
+        </section>
+
+        <section class="card">
+            <h2>Interference Analysis</h2>
+            <p id="analysis">Start the simulation to view results.</p>
+            <button id="startButton">Start Simulation</button>
+            <button id="stopButton" class="secondary">Stop</button>
+        </section>
+
+        <section class="card">
+            <h2>Event Log</h2>
+            <ul id="eventLog">
+                <li>Dashboard ready. No live radio connection.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
